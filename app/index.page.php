@@ -4,7 +4,7 @@ use lib\HttpRequest;
 class app_index extends STpl {
     //默认页面
     function PageIndex($inPath){
-        $this->assign("title","bt搜～");
+        $this->assign("title","搜索");
         $this->assign("keyword","");
         return $this->render("index.tpl");
     }
@@ -13,7 +13,7 @@ class app_index extends STpl {
 //        var_dump($inPath);
         if (count($inPath)==4){
             //合法请求
-            $this->assign("title","bt搜～".$inPath[3]);
+            $this->assign("title","搜索".$inPath[3]);
             $this->assign("keyword",$inPath[3]);
             return $this->render("index.tpl");
         }else{
