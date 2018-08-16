@@ -13,3 +13,4 @@
 <script src="/bower/react/react.min.js"></script>
 <script src="/bower/react/react-dom.min.js"></script>
 <script src="/js/browser.min.js"></script>
+<script src="/js/ad.js"></script>
