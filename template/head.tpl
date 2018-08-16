@@ -13,4 +13,10 @@
 <script src="/bower/react/react.min.js"></script>
 <script src="/bower/react/react-dom.min.js"></script>
 <script src="/js/browser.min.js"></script>
-<script src="/js/ad.js"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8638221760401486",
+    enable_page_level_ads: true
+  });
+</script>
