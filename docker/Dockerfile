@@ -9,13 +9,13 @@ ENV www_root /srv/www
 ENV www_name bt-search
 ENV git_repo "https://github.com/ecator/bt-search.git"
 
-ENV php_ini /etc/php/7.0/fpm/php.ini
+ENV php_ini /etc/php/7.2/fpm/php.ini
 ENV nginx_ini /etc/nginx/nginx.conf
 ENV nginx_bt /etc/nginx/sites-enabled/bt-search.conf
 
 # 软件环境安装
 RUN apt-get update \
-	&& apt-get install -y git nginx=1.10.3* php=1:7.0* php-curl php-xml composer nodejs npm \
+	&& apt-get install -y git nginx php php-curl php-xml composer nodejs npm \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN npm install -g bower \
