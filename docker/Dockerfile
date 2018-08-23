@@ -17,8 +17,8 @@ ENV nginx_bt /etc/nginx/sites-enabled/bt-search.conf
 
 # 软件环境安装
 RUN apt-get update \
-	&& apt-get install -y software-properties-common && add-apt-repository ppa:ondrej/php \
-	&& apt-get install -y git nginx php php-curl php-xml composer nodejs npm \
+	#&& apt-get install -y software-properties-common && add-apt-repository ppa:ondrej/php \
+	&& apt-get install -y git nginx php php-curl php-xml php-gd composer nodejs npm \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN npm install -g bower \
@@ -34,10 +34,10 @@ WORKDIR $www_name
 RUN composer install \
 	&& nodejs /usr/local/bin/bower install --allow-root
 
-RUN apt-get purge -y git composer nodejs npm \
-	&& apt-get autoremove -y \
-	&& apt-get clean \
-	&& apt-get autoclean
+#RUN apt-get purge -y git composer nodejs npm \
+#	&& apt-get autoremove -y \
+#	&& apt-get clean \
+#	&& apt-get autoclean
 
 # 解决权限问题
 RUN	chmod -R 755 * \
