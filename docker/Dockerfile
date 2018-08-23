@@ -17,8 +17,9 @@ ENV nginx_bt /etc/nginx/sites-enabled/bt-search.conf
 
 # 软件环境安装
 RUN apt-get update \
-	#&& apt-get install -y software-properties-common && add-apt-repository ppa:ondrej/php \
-	&& apt-get install -y git nginx php php-curl php-xml php-gd composer nodejs npm \
+	&& apt-get install -y software-properties-common && add-apt-repository ppa:ondrej/php \
+	&& apt-get update \
+	&& apt-get install -y git nginx php php-fpm php-curl php-xml php-gd composer nodejs npm \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN npm install -g bower \
