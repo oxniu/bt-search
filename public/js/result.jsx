@@ -88,7 +88,7 @@ var Result=React.createClass({
             }
         }else {
             //没有进行搜索关键词
-            return <h3 className="text-center">欢迎访问bt搜～</h3>;
+            return <h3 className="text-center">Welcome to BT Search</h3>;
         }
     }
 });
