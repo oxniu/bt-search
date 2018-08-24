@@ -11,7 +11,7 @@ ENV www_root /srv/www
 ENV www_name bt-search
 ENV git_repo "https://github.com/oxniu/bt-search.git"
 
-ENV php_ini /etc/php/7.2/fpm/php.ini
+ENV php_ini /etc/php/7.0/fpm/php.ini
 ENV nginx_ini /etc/nginx/nginx.conf
 ENV nginx_bt /etc/nginx/sites-enabled/bt-search.conf
 
@@ -19,7 +19,7 @@ ENV nginx_bt /etc/nginx/sites-enabled/bt-search.conf
 RUN apt-get update \
 	&& apt-get install -y software-properties-common && add-apt-repository ppa:ondrej/php \
 	&& apt-get update \
-	&& apt-get install -y git nginx php7.2 php7.2-fpm php-curl php-xml php-gd composer nodejs npm php7.2 php7.2-fpm php7.2-common php7.2-curl php7.2-xml php-curl php-xml #\
+	&& apt-get install -y git nginx php7.0 php7.0-common php7.0-fpm php7.0-curl php7.0-xml php7.0-gd composer nodejs npm php7.2 php7.2-fpm php7.2-common php7.2-curl php7.2-xml php-curl php-xml #\
 	#&& rm -rf /var/lib/apt/lists/*
 
 RUN npm install -g bower \
