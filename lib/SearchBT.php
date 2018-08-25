@@ -43,8 +43,8 @@ class SearchBT
         $re=str_replace(["\r","\n","<b>","</b>"],"",$re);
         $pattern="/<dl class='item'>.*?target='_blank'>(.*?)<.*?收录时间:(.*?)<.*?(magnet:.*?)' >/";
         preg_match_all($pattern,$re,$matches);
-//        var_dump($matches);
-        print($matches);
+        var_dump($matches);
+        
         $items=array();
         for ($i=0;$i<count($matches[0]);$i++){
             $item=new \stdClass();
