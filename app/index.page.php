@@ -51,10 +51,11 @@ class app_index extends STpl {
         }else {
             //有关键词参数
             $re->msg="ok";
-            $torrentkitty=SearchBT::torrentkitty($keyword);
+            //$torrentkitty=SearchBT::torrentkitty($keyword);
 //            var_dump($torrentkitty);
             $cldq=SearchBT::cldq($keyword);
-            $reArr=array_merge($torrentkitty,$cldq);
+            //$reArr=array_merge($torrentkitty,$cldq);
+            $reArr=$cldq;
             $this->sortByKeyword(explode(" ",$keyword),$reArr);
             $re->results = $reArr;
         }
