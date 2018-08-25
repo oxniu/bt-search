@@ -54,10 +54,10 @@ class app_index extends STpl {
             //$torrentkitty=SearchBT::torrentkitty($keyword);
 //            var_dump($torrentkitty);
             $cldq=SearchBT::cldq($keyword);
-            //$reArr=array_merge($torrentkitty,$cldq);
-            //$this->sortByKeyword(explode(" ",$keyword),$reArr);
-            $this->sortByKeyword(explode(" ",$keyword),$cldq);
-            $re->results = $cldq;
+            $reArr=array_merge("",$cldq);
+            $this->sortByKeyword(explode(" ",$keyword),$reArr);
+            //$this->sortByKeyword(explode(" ",$keyword),$cldq);
+            $re->results = $reArr;
         }
         echo json_encode($re);
     }
