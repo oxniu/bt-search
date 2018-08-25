@@ -12,7 +12,7 @@ use lib\HttpRequest;
 class SearchBT
 {
     static private $torrentkitty = "https://www.torrentkitty.tv/search/";
-    static private $cldq="http://cilidaquan.co/cldq/";
+    static private $cldq="http://cilidaquan.me/cldq/";
 
     //从torrentkitty搜索
     static function torrentkitty($keyword){
@@ -43,7 +43,7 @@ class SearchBT
         $re=str_replace(["\r","\n","<b>","</b>"],"",$re);
         $pattern="/<dl class='item'>.*?target='_blank'>(.*?)<.*?收录时间:(.*?)<.*?(magnet:.*?)' >/";
         preg_match_all($pattern,$re,$matches);
-        var_dump($matches);
+        //var_dump($matches);
         
         $items=array();
         for ($i=0;$i<count($matches[0]);$i++){
