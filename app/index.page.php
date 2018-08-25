@@ -54,9 +54,9 @@ class app_index extends STpl {
             //$torrentkitty=SearchBT::torrentkitty($keyword);
 //            var_dump($torrentkitty);
             $torrentkitty=array("");
-            $cldq=SearchBT::cldq($keyword);
+            $reArr=SearchBT::cldq($keyword);
             //$reArr=array_merge($torrentkitty,$cldq);
-            $reArr=$cldq;
+            //$reArr=$cldq;
             $this->sortByKeyword(explode(" ",$keyword),$reArr);
             //$this->sortByKeyword(explode(" ",$keyword),$cldq);
             $re->results = $reArr;
