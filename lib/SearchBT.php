@@ -12,7 +12,7 @@ use lib\HttpRequest;
 class SearchBT
 {
     static private $torrentkitty = "https://www.torrentkitty.tv/search/";
-    static private $cldq="http://cilidaquan.me/cldq/";
+    static private $cldq="http://cilidaquan.co/cldq/";
 
     //从torrentkitty搜索
     static function torrentkitty($keyword){
