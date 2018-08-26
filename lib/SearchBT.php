@@ -50,7 +50,7 @@ class SearchBT
             $item=new \stdClass();
             $item->title=$matches[1][$i];
             $item->date=$matches[2][$i];
-            $item->magnet=$matches[3][$i];
+            $item->magnet="magnet:?xt=urn:btih:".$matches[3][$i];
             //过滤掉空白标题和无磁力链接项
             if ($item->title && $item->magnet){
                 $items[]=$item;
