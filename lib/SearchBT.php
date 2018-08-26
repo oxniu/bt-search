@@ -41,7 +41,7 @@ class SearchBT
         $url=self::$cldq.urlencode($keyword)."/1-0-0.html";
         $re=HttpRequest::request("get",$url);
         $re=str_replace(["\r","\n","<b>","</b>"],"",$re);
-        $pattern="/<dl class='item'>.*?target='_blank'>(.*?)<.*?收录时间:(.*?)<.*?(magnet:.*?)' >/";
+        $pattern="/<dl class='item'>.*?target='_blank'>(.*?)<.*?收录时间:(.*?)<.*?magnet\/(.*?).html/";
         preg_match_all($pattern,$re,$matches);
         //var_dump($matches);
         
